@@ -1,0 +1,7 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ colord\[[0-9]+\]: Daemon ready for requests$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ colord\[[0-9]+\]: Device added: .+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ colord\[[0-9]+\]: Profile added: .+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ colord\[[0-9]+\]: Using (config|(mapping|device) database) file .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ colord\[[0-9]+\]: loaded plugin .+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ colord\[[0-9]+\]: loaded plugin libcd_plugin_scanner.so$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ colord\[[0-9]+\]: plugin /usr/lib/colord-plugins/libcd_plugin_sane.so not loaded: plugin refused to load$

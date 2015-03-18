@@ -1,0 +1,3 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ org\.a11y\.Bus\[[0-9]+\]: Activating service name='org\.a11y\.atspi\.Registry'$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ org\.a11y\.Bus\[[0-9]+\]: Successfully activated service 'org\.a11y\.atspi\.Registry'$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ org\.a11y\.atspi.Registry\[[0-9]+\]: SpiRegistry daemon is running with well-known name - org\.a11y\.atspi\.Registry$

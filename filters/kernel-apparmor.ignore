@@ -1,0 +1,6 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: AppArmor: AppArmor Filesystem Enabled$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: AppArmor: AppArmor initialized$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: AppArmor: AppArmor sha1 policy hashing enabled$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: audit_printk_skb: [0-9]+ callbacks suppressed$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: type=1006 audit\([0-9.:]+\): pid=[0-9]+ uid=0 old auid=[0-9]+ new auid=[0-9]+ old ses=[0-9]+ new ses=[0-9]+ res=1$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: type=1400 audit\([0-9.:]+\): apparmor="STATUS" operation="profile_load" name=".+" pid=[0-9]+ comm="apparmor_parser"$

@@ -1,0 +1,4 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntfs-3g\[[0-9]+\]: Version [0-9.]+ external FUSE [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntfs-3g\[[0-9]+\]: Mounted /dev/.* \(Read-Write, label ".*", NTFS [0-9.]+\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntfs-3g\[[0-9]+\]: (Cmdline|Mount) options: .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntfs-3g\[[0-9]+\]: Global ownership and permissions enforced, configuration type 7$

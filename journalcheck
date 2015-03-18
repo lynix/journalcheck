@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#######################################################################
+#       journalcheck - Something like 'logcheck' for journald         #
+#                      2015 - Alexander Koch                          #
+#######################################################################
+
+#######################################################################
+#  This piece of software is released under MIT License, see LICENSE  #
+#  file.                                                              #
+#######################################################################
+
+
+FILTER_GLOBAL=${FILTER_GLOBAL:-"/usr/share/journalcheck.d"}
+FILTER_LOCAL=${FILTER_LOCAL:-"$HOME/.journalcheck.d"}
+MERGE_FILE=${MERGE_FILE:-"/tmp/merged.ignore"}
+STATE_FILE=${STATE_FILE:-"/var/run/journalcheck.state"}
+
+
+cat "$FILTER_GLOBAL"/*.ignore > "$MERGE_FILE"
+if [ -d "$FILTER_LOCAL" ]; then
+	for F in "$FILTER_LOCAL"/*.ignore; do
+		cat "$F" >> "$MERGE_FILE"
+	done
+fi
+
+JCTL_ARGS="--no-pager -a"
+if [ -r "$STATE_FILE" ]; then
+	JCTL_ARGS="$JCTL_ARGS --since=\"$(cat "$STATE_FILE")\""
+fi
+
+journalctl $JCTL_ARGS | egrep -vf "$MERGE_FILE"
+
+date +'%F %T' > "$STATE_FILE"
+rm -f "$MERGE_FILE"
+
+exit 0

@@ -1,0 +1,1 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ su\[[0-9]+\]: pam_unix\(su:session\): session (opened|closed) for user [_[:alnum:]-]+( by \(uid=[0-9]+\))?$

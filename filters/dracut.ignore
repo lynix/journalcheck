@@ -1,0 +1,4 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dracut-cmdline\[[0-9]+\]: Using kernel command line parameters:$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dracut-cmdline\[[0-9]+\]: dracut- dracut-.+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dracut-initqueue\[[0-9]+\]: Scanning devices .+ for LVM logical volumes .+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dracut-initqueue\[[0-9]+\]: inactive .+$

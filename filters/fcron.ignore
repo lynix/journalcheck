@@ -1,0 +1,10 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: Job .* completed( \(mailing output\))?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: Job .* started for user [._[:alnum:]-]+ \(pid [0-9]+\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: Job /usr/sbin/run-cron /etc/cron\.hourly (started for user systab \(pid [0-9]+\)|completed)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: adding file [._[:alnum:]-]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: fcron\[[0-9]+\] [0-9.]+ started$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: pam_unix\(fcron:session\): session closed for user .+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: pam_unix\(fcron:session\): session opened for user .+ by \(uid=0\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcron\[[0-9]+\]: updating configuration from /var/spool/fcron$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fcrontab\[[0-9]+\]: listing [^[:space:]]+'s fcrontab$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ run-crons\[[0-9]+\]: \(root\) CMD \(.*\)$

@@ -1,0 +1,37 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-cryptsetup\[[0-9]+\]: Set cipher aes, mode xts-plain(64)?, key size [0-9]+ bits for device [._[:alnum:]/-]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-fsck\[[0-9]+\]: /sbin/fsck.btrfs: BTRFS file system.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-fsck\[[0-9]+\]: [._[:alnum:]-]+: clean, [0-9]+/[0-9]+ files, [0-9]+/[0-9]+ blocks$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Journal (started|stopped)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Missed [0-9]+ kernel messages$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Received SIGTERM from PID 1 \(systemd\).$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Runtime journal is using [0-9.]+M \(max allowed [0-9.]+M, trying to leave [0-9.]+M free of [0-9.]+G available → current limit [0-9.]+M\)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: (New seat seat[0-9]+\.|Watching system buttons on /dev/input/event[0-9]+ \(Power Button\)|New session c?[0-9]+ of user [._[:alnum:]-]+\.)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Linked /tmp/\.X11-unix/X[0-9]+ to /run/user/[0-9]+/X11-display\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Removed session [0-9]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-modules-load\[[0-9]+\]: (Inserted module '[._[:alnum:]-]+'|Module '[._[:alnum:]-]+' is (already loaded|builtin))$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sysctl\[[0-9]+\]: Overwriting earlier assignment of kernel/sysrq in file '/usr/lib64/sysctl.d/60-gentoo.conf'.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[0-9]+\]: starting version [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Activated swap .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Activating swap .*\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Created slice .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Detected architecture 'x86-64'\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Expecting device .*\.device\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Found device .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(systemd-binfmt\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Inserted module 'autofs4'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Listening on .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reloading\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Set hostname to <[._[:alnum:]-]+>\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Set up .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Smack is not enabled in the kernel, not loading access rules\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Switching root\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: systemd [0-9]+ running in system mode\. \(.+\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: systemd-tmpfiles-clean.timer: time change, recalculating next elapse.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Starting|Started|Stopping|Stopped) .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Mounted .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Mounting .*\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Reached target .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Startup finished in .+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Time has been changed$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: pam_unix\(systemd-user:session\): session opened for user .* by \(uid=0\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: pam_unix\(systemd-user:session\): session closed for user .+$

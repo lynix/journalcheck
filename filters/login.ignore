@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ login\[[0-9]+\]: LOGIN ON tty[0-9]+ BY [._[:alnum:]-]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ login\[[0-9]+\]: pam_unix\(login:session\): session opened for user [._[:alnum:]-]+ by LOGIN\(uid=[0-9]+\)$

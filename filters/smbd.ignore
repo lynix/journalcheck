@@ -1,0 +1,2 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smbd\[[0-9]+\]: \[[0-9/]+ [0-9:]{8}\.[0-9]+,  0\] smbd/server\.c:[0-9]+\(main\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smbd\[[0-9]+\]: standard input is not a socket, assuming -D option$

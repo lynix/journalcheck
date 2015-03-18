@@ -1,0 +1,27 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: (Incoming|Outgoing) Control Channel Authentication: Using 160 bit message hash 'SHA1' for HMAC authentication$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: /bin/ifconfig tun[0-9]+ [0-9.]+ netmask [0-9.]+ mtu [0-9]+ broadcast [0-9.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: /usr/bin/ip addr add dev tun[0-9]+ [0-9.]+/[0-9]+ broadcast [0-9.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: /usr/bin/ip link set dev tun[0-9]+ up mtu [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: /usr/sbin/ip addr del dev tun[0-9]+ [0-9.]+/[0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Closing TUN/TAP interface$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Control Channel Authentication: tls-auth using INLINE static key file$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Control Channel MTU parms \[ L:[0-9]+ D:[0-9]+ EF:[0-9]+ EB:[0-9]+ ET:[0-9]+ EL:[0-9]+ ]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Data Channel (De|En)crypt: Cipher 'BF-CBC' initialized with 128 bit key$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Data Channel (De|En)crypt: Using 160 bit message hash 'SHA1' for HMAC authentication$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Data Channel MTU parms \[ L:[0-9]+ D:[0-9]+ EF:[0-9]+ EB:[0-9]+ ET:[0-9]+ EL:[0-9]+ AF:[0-9]+/[0-9]+ \]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Expected Remote Options hash \(VER=V4\): '[0-9a-f]{8}'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Initialization Sequence Completed$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: LZO compression initialized$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: Local Options hash \(VER=V4\): '[0-9a-f]{8}'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: NOTE: OpenVPN [0-9.]+ requires '--script-security 2' or higher to call user-defined scripts or executables$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: OpenVPN .* built on .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: TCP/UDP: Closing socket$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: TUN/TAP device tun[0-9]+ opened$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: UDPv4 link local: \[undef\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: UDPv4 link remote: \[AF_INET\][0-9.]+:[0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: VERIFY OK: depth=[0-9]+, CN=.*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: VERIFY OK: nsCertType=SERVER$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: \[.*\] Peer Connection Initiated with \[AF_INET\][0-9.]+:[0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: do_ifconfig, tt->ipv6=[0-1], tt->did_ifconfig_ipv6_setup=[0-1]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ openvpn\[[0-9]+\]: library versions: .*$

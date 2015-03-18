@@ -1,0 +1,11 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Copyright \(C\) .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Opened configuration file /etc/smartd\.conf$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Configuration file /etc/smartd\.conf was parsed, found DEVICESCAN, scanning devices$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Monitoring [0-9]+ ATA and [0-9]+ SCSI devices$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: smartd [0-9.]+ [0-9-]+ r[0-9]+ \[x86_64-linux-.*\] \(local build\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/sd[a-z] \[SAT\], [ ._[:alnum:]-]+, S/N:[[:alnum:]-]+, WWN:[._[:alnum:]-]+, FW:[._[:alnum:]-]+, [0-9.]+ (G|T)B$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/sd[a-z] \[SAT\], (not )?found in smartd database(: .*)?.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/sd[a-z] \[SAT\], SMART Usage Attribute: [0-9]+ [a-zA-Z_]+ changed from [0-9]+ to [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/sd[a-z] \[SAT\], opened$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/sd[a-z] \[SAT\], is SMART capable\. Adding to "monitor" list\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/sd[a-z], type changed from 'scsi' to 'sat'$

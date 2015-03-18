@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ lightdm\[[0-9]+\]: pam_unix\(lightdm-autologin:session\): session opened for user .* by \(uid=0\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ lightdm\[[0-9]+\]: pam_succeed_if\(lightdm-autologin:auth\): requirement "user ingroup autologin" was met by user ".*"$
