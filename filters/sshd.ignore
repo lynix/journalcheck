@@ -1,6 +1,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Server listening on ([0-9.]+|[0-9a-f:]+) port [0-9]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:session\): session opened for user [._[:alnum:]-]+ by \(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:session\): session closed for user [._[:alnum:]-]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Accepted (password|publickey) for [._[:alnum:]-]+ from [0-9a-f:.]+ port [0-9]+ ssh2$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Accepted (password|publickey) for [._[:alnum:]-]+ from [0-9a-f:.]+ port [0-9]+ ssh2: RSA [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: subsystem request for sftp by user [._[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: (error: )?Received disconnect from [0-9a-f:.]+: 11: disconnected by user$
