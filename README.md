@@ -19,7 +19,8 @@ volatile system logs as well.
 ## Usage
 Journalcheck is best run as regular user (no need for root privileges!)
 via cron:
-``` MAILTO=user@localhost
+```
+MAILTO=user@localhost
 
 # m  h  dom mon dow   command
 */30 *  *   *   *     journalcheck
