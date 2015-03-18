@@ -1,0 +1,13 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCP(REQUEST|OFFER|RELEASE)\(eth[0-9]\) [0-9.]+ [0-9a-f:]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCP, IP range [0-9.]+ -- [0-9.]+, lease time [0-9]+(d|h)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCPACK\(eth[0-9]\) [0-9.]+ [0-9a-f:]+( [._[:alnum:]-]+)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCPDISCOVER\(eth[0-9]\)( [0-9.]+)? [0-9a-f:]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCPNAK\(eth[0-9]\) [0-9.]+ [0-9a-f:]+ (lease not found|wrong address)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: DBus support enabled: connected to system bus$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: asynchronous logging enabled, queue limit is [0-9]+ messages$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: compile time options: .+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: dnsmasq: syntax check OK\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: read /etc/hosts - [0-9]+ addresses$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: started, version .+ cachesize [0-9]+.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: using local addresses only for domain [._[:alnum:]-]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: using nameserver [0-9a-f:.]+#53$
