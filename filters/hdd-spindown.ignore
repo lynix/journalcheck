@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ hdd-spindown\.sh\[[0-9]+\]: spawned monitor thread for sd[a-z]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ hdd-spindown\.sh\[[0-9]+\]: suspending sd[a-z]$
