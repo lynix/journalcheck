@@ -6,3 +6,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ anacron\[[0-9]+\]: Normal exit \([0-9]+ jobs run\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ anacron\[[0-9]+\]: Will run job `.+' in [0-9]+ min\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ crond\[[0-9]+\]: pam_unix\(crond:session\): session opened for user .+ by \(uid=0\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ crontab\[[0-9]+\]: \([._[:alnum:]-]+\) ((BEGIN|END) EDIT|REPLACE|RELOAD) \(.+\)$
