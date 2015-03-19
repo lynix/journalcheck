@@ -1,2 +1,2 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sudo\[[0-9]+\]: pam_unix\(sudo:session\): session (opened|closed) for user [_[:alnum:]-]+( by [_[:alnum:]-]+\(uid=[0-9]+\))?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sudo\[[0-9]+\]: [_[:alnum:]-]+ : (a password is required ;)?TTY=pts/[0-9]+ ; PWD=[/. _[:alnum:]-]+ ; USER=[_[:alnum:]-]+ ; COMMAND=.*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sudo\[[0-9]+\]: [_[:alnum:]-]+ : (a password is required ; )?TTY=pts/[0-9]+ ; PWD=[/. _[:alnum:]-]+ ; USER=[_[:alnum:]-]+ ; COMMAND=.*$
