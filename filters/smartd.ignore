@@ -5,6 +5,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], SMART Prefailure Attribute: 3 Spin_Up_Time changed from [0-9]+ to [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], SMART Usage Attribute: [0-9]+ [a-zA-Z_]+ changed from [0-9]+ to [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], [ ._[:alnum:]-]+, S/N:[[:alnum:]-]+, WWN:[._[:alnum:]-]+, FW:[._[:alnum:]-]+, [0-9.]+ (G|T)B$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], can't monitor .+ - no Attribute [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], is SMART capable\. Adding to "monitor" list\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], opened$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], previous self-test completed without error$
