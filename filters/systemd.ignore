@@ -3,7 +3,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-fsck\[[0-9]+\]: [._[:alnum:]-]+: clean, [0-9]+/[0-9]+ files, [0-9]+/[0-9]+ blocks$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Journal (started|stopped)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Missed [0-9]+ kernel messages$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Received SIGRTMIN\+24 from PID [0-9]+ \(.+\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Received SIGTERM from PID 1 \(systemd\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Runtime journal is using [0-9.]+M \(max allowed [0-9.]+M, trying to leave [0-9.]+M free of [0-9.]+G available → current limit [0-9.]+M\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: (New seat seat[0-9]+\.|Watching system buttons on /dev/input/event[0-9]+ \(Power Button\)|New session c?[0-9]+ of user [._[:alnum:]-]+\.)$
@@ -32,6 +31,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Mounted .*\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Mounting .*\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Reached target .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Received SIGRTMIN\+24 from PID [0-9]+ \(.+\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Startup finished in .+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Time has been changed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: pam_unix\(systemd-user:session\): session closed for user .+$
