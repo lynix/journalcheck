@@ -3,8 +3,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-fsck\[[0-9]+\]: [._[:alnum:]-]+: clean, [0-9]+/[0-9]+ files, [0-9]+/[0-9]+ blocks$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Journal (started|stopped)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Missed [0-9]+ kernel messages$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Received SIGTERM from PID 1 \(systemd\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Runtime journal is using [0-9.]+M \(max allowed [0-9.]+M, trying to leave [0-9.]+M free of [0-9.]+G available → current limit [0-9.]+M\)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Received SIGTERM from PID 1 \(systemd\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: (New seat seat[0-9]+\.|Watching system buttons on /dev/input/event[0-9]+ \(Power Button\)|New session c?[0-9]+ of user [._[:alnum:]-]+\.)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Linked /tmp/\.X11-unix/X[0-9]+ to /run/user/[0-9]+/X11-display\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Removed session c?[0-9]+\.$
