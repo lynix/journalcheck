@@ -2,3 +2,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ (dbus-daemon\[[0-9]+\]: )?dbus\[[0-9]+\]: \[system\] Reloaded configuration$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ (dbus-daemon\[[0-9]+\]: )?dbus\[[0-9]+\]: \[system\] Successfully activated service '.*'$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dbus\[[0-9]+\]: \[system\] Activating service name='.+' \(using servicehelper\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dbus\[[0-9]+\]: \[system\] Activation via systemd failed for unit '.+': Unit .+ is masked\.$
