@@ -1,0 +1,1 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ msmtp\[[0-9]+\]: host=[._[:alnum:]-]+ tls=(on|off) auth=on user=.+ from=.+ recipients=.+ mailsize=[0-9]+ smtpstatus=250 smtpmsg=.+ exitcode=EX_OK$
