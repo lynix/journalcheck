@@ -18,7 +18,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Expecting device .*\.device\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Found device .*\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(systemd-binfmt\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Inserted module 'autofs4'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Inserted module '.+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Listening on .*\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reloading\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Removed slice user-[0-9]+\.slice\.$
