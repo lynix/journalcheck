@@ -2,3 +2,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ minidlnad\[[0-9]+\]: [._[:alnum:]-]+\.c:[0-9]+: warn: New media_dir detected; rescanning\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ minidlnad\[[0-9]+\]: [._[:alnum:]-]+\.c:[0-9]+: warn: Starting MiniDLNA version 1\.1\.4\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ minidlnad\[[0-9]+\]: [._[:alnum:]-]+\.c:[0-9]+: warn: received signal 15, good-bye$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ minidlnad\[[0-9]+\]: \[mov,mp4,m4a,3gp,3g2,mj2 @ 0x[0-9a-f]+\] stream [0-9]+, timescale not set$
