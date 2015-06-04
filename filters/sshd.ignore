@@ -5,6 +5,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: SSH: Server;Ltype: Kex;Remote: .+;Enc: .+;MAC: .+;Comp: none \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: SSH: Server;Ltype: Version;Remote: .+;Protocol: [0-9.]+;Client: OpenSSH_.+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Server listening on ([0-9.]+|[0-9a-f:]+) port [0-9]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:session\): session closed for user [._[:alnum:]-]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:session\): session opened for user [._[:alnum:]-]+ by \(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: subsystem request for sftp by user [._[:alnum:]-]+$

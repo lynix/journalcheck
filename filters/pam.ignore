@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ [._[:alnum:]-]+\[[0-9]+\]: pam_unix\([._[:alnum:]-]+:session\): session closed for user [._[:alnum:]-]+(  by [._[:alnum:]-]+\(uid=[0-9]+\))?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ [._[:alnum:]-]+\[[0-9]+\]: pam_unix\([._[:alnum:]-]+:session\): session opened for user [._[:alnum:]-]+ by \(uid=[0-9]+\)$
