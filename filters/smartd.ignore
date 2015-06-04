@@ -9,6 +9,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], is SMART capable\. Adding to "monitor" list\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], opened$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], previous self-test completed without error$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], self-test in progress, [0-9]+% remaining$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+ \[SAT\], starting scheduled (Short|Long) Self-Test\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Device: /dev/.+, type changed from 'scsi' to 'sat'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ smartd\[[0-9]+\]: Monitoring [0-9]+ ATA and [0-9]+ SCSI devices$
