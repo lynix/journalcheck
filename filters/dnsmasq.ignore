@@ -7,6 +7,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: asynchronous logging enabled, queue limit is [0-9]+ messages$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: compile time options: .+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: dnsmasq: syntax check OK\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: exiting on receipt of SIGTERM$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: read /etc/hosts - [0-9]+ addresses$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: started, version .+ cachesize [0-9]+.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq\[[0-9]+\]: using local addresses only for domain [._[:alnum:]-]+$
