@@ -5,6 +5,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: clock is now synced$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: listening on [0-9a-f:.]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: ntp engine ready$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: peer [0-9a-f.:]+ now valid$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: peer [0-9a-f.:]+ now (in)?valid$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: reply from [0-9a-f.:]+: negative delay -?[0-9.]+s, next query [0-9]+s$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: set local clock to .+ \(offset [0-9.-]+s\)$
