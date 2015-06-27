@@ -1,9 +1,9 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: [0-9a-f:.]+ - - "GET .+ HTTP/1\.1" (200 [0-9]+|304 0|404 0) ".*" ".+"$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: exiting due to signal 15$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: fdwatch - [0-9]+ polls \([0-9.]+/sec\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: libhttpd - [0-9]+ strings allocated, [0-9]+ bytes \([0-9.]+ bytes/str\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: map cache - [0-9]+ allocated, [0-9]+ active \([0-9]+ bytes\), [0-9]+ free; hash size: [0-9]+; expire age: [0-9]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: thttpd - [0-9]+ connections \([0-9.]+/sec\), [0-9]+ max simultaneous, [0-9]+ bytes \([0-9.]+/sec\), [0-9]+ httpd_conns allocated$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: +fdwatch - [0-9]+ polls \([0-9.]+/sec\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: +libhttpd - [0-9]+ strings allocated, [0-9]+ bytes \([0-9.]+ bytes/str\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: +map cache - [0-9]+ allocated, [0-9]+ active \([0-9]+ bytes\), [0-9]+ free; hash size: [0-9]+; expire age: [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: +thttpd - [0-9]+ connections \([0-9.]+/sec\), [0-9]+ max simultaneous, [0-9]+ bytes \([0-9.]+/sec\), [0-9]+ httpd_conns allocated$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: thttpd/.+ starting on port [0-9]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: timers - [0-9]+ allocated, [0-9]+ active, [0-9]+ free$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: +timers - [0-9]+ allocated, [0-9]+ active, [0-9]+ free$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ thttpd\[[0-9]+\]: up [0-9]+ seconds, stats for [0-9]+ seconds:$
