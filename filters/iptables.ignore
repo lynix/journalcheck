@@ -1,0 +1,1 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ iptables-flush\[[0-9]+\]: /usr/sbin/ip6?tables$
