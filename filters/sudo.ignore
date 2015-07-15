@@ -1,1 +1,1 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sudo\[[0-9]+\]: [_[:alnum:]-]+ : (a password is required ; )?TTY=pts/[0-9]+ ; PWD=[/. _[:alnum:]-]+ ; USER=[_[:alnum:]-]+ ; COMMAND=.*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sudo\[[0-9]+\]: +[_[:alnum:]-]+ : (a password is required ; )?TTY=pts/[0-9]+ ; PWD=.+ ; USER=[_[:alnum:]-]+ ; COMMAND=.+$

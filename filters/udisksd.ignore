@@ -1,8 +1,9 @@
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: ((pci|scsi_host) )?\*\*\*\* (ADDING|UPDATING|IGNORING ADD|ADDED|CHANGING|CHANGED) /sys/devices/.+$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* (Refreshing ATA SMART data for|EMITTING CHANGED for)
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: helper\(pid [0-9 ]+\): (launched job .*|completed with exit code 0)$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Acquired the name org\.freedesktop\.UDisks2 on the system message bus$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Cleaning up mount point /run/media/.* \(device [0-9:]+ is not mounted\)$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Mounted /dev/.* at /run/media/.* on behalf of uid [0-9]+$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Unmounted /dev/.* on behalf of uid [0-9]+$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: udisks daemon version [0-9.]+ starting$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* ((pci|scsi_host) )?(ADDING|UPDATING|IGNORING ADD|ADDED|CHANGING|CHANGED) /sys/devices/.+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* (Refreshing ATA SMART data for|EMITTING CHANGED for)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* /proc/self/mountinfo changed$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: helper\(pid [0-9 ]+\): (launched job .*|completed with exit code 0)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Acquired the name org\.freedesktop\.UDisks2 on the system message bus$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Cleaning up mount point /run/media/.* \(device [0-9:]+ is not mounted\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Mounted /dev/.* at /run/media/.* on behalf of uid [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Unmounted /dev/.* on behalf of uid [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: udisks daemon version [0-9.]+ starting$

@@ -1,13 +1,13 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: DUID [0-9a-f:]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: IAID [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: Router Advertisement from [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: acknowledged [0-9.]+ from [0-9.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: adding default route via [0-9.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: adding (route to|address|default route via) [0-9.:]+/[0-9]+
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: adding host route to [0-9.]+ via [0-9.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: adding route to [0-9.]+/[0-9]+
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: carrier acquired$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: checking for [0-9.]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: fe80::[0-9a-f:]+: expired default Router$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: leased [0-9.]+ for infinity$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: leased [0-9.]+ for ([0-9]+ seconds|infinity)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: no IPv6 Routers available$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: offered [0-9.]+ from [0-9.]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: rebinding lease of [0-9.]+$
@@ -17,6 +17,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: soliciting a DHCP lease$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: soliciting an IPv6 router$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: waiting for carrier$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: dhcpcd exited$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: forked to background, child pid [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: received SIGTERM, stopping$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: sending signal TERM to pid [0-9]+$
