@@ -1,5 +1,7 @@
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Started polkitd version [0-9.]+$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Loading rules from directory (/etc/polkit-1/rules.d|/usr/share/polkit-1/rules.d)$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Finished loading, compiling and executing [0-9]+ rules$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: (Registered|Unregistered) Authentication Agent for unix-(session|process):[0-9]+ .*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Acquired the name org.freedesktop.PolicyKit1 on the system bus$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Registered Authentication Agent for unix-session:[0-9]+ .*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Collecting garbage unconditionally\.\.\.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Finished loading, compiling and executing [0-9]+ rules$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Loading rules from directory (/etc/polkit-1/rules.d|/usr/share/polkit-1/rules.d)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Reloading rules$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ polkitd\[[0-9]+\]: Started polkitd version [0-9.]+$
