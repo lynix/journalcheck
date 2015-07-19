@@ -1,8 +1,12 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Canary thread running\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Demoted [0-9]+ threads\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Demoting known real-time threads\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Running\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Successfully called chroot\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Successfully demoted thread [0-9]+ of process [0-9]+ \(.+\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Successfully dropped privileges\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Successfully limited resources\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Running\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Watchdog thread running\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Canary thread running\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Successfully made thread [0-9]+ of process [0-9]+ \(.*\) owned by '[0-9]+' high priority at nice level [0-9.-]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Supervising [0-9]+ threads of [0-9]+ processes of [0-9]+ users\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: The canary thread is apparently starving\. Taking action\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Watchdog thread running\.$

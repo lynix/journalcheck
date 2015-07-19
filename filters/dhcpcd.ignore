@@ -1,10 +1,10 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: DUID [0-9a-f:]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: (adding|deleting) (route to|address|default route via) [0-9a-f.:]+(/[0-9]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: IAID [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: Router Advertisement from [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: acknowledged [0-9.]+ from [0-9.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: adding (route to|address|default route via) [0-9.:]+/[0-9]+
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: adding host route to [0-9.]+ via [0-9.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: carrier acquired$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: carrier (acquired|lost)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: checking for [0-9.]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: fe80::[0-9a-f:]+: expired default Router$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: leased [0-9.]+ for ([0-9]+ seconds|infinity)$
