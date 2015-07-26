@@ -1,9 +1,10 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-cryptsetup\[[0-9]+\]: Set cipher aes, mode xts-plain(64)?, key size [0-9]+ bits for device [._[:alnum:]/-]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-fsck\[[0-9]+\]: /sbin/fsck.btrfs: BTRFS file system.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-fsck\[[0-9]+\]: [._[:alnum:]-]+: clean, [0-9]+/[0-9]+ files, [0-9]+/[0-9]+ blocks$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: (Runtime|Permanent) journal is using [0-9.]+M \(max allowed [0-9.]+M, trying to leave [0-9.]+(M|G) free of [0-9.]+G available → current limit [0-9.]+M\)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: (Runtime|Permanent) journal is using [0-9.]+M \(max allowed [0-9.]+(M|G), trying to leave [0-9.]+(M|G) free of [0-9.]+G available → current limit [0-9.]+(M|G)\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Journal (started|stopped)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Missed [0-9]+ kernel messages$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Time spent on flushing to /var is [0-9.]+ms for [0-9]+ entries\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Received SIGTERM from PID 1 \(systemd\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: (New seat seat[0-9]+\.|Watching system buttons on /dev/input/event[0-9]+ \(Power Button\))$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Linked /tmp/\.X11-unix/X[0-9]+ to /run/user/[0-9]+/X11-display\.$
@@ -18,7 +19,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sysctl\[[0-9]+\]: Overwriting earlier assignment of kernel/sysrq in file '/usr/lib64/sysctl.d/60-gentoo.conf'.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[0-9]+\]: Synchronized to time server [0-9a-f:.]+:123 \([._[:alnum:]-]+\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[0-9]+\]: starting version [0-9]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: (Created|Removed) slice .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: .+: Unit is bound to inactive unit .+\. Stopping, too\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: .+: Unit not needed anymore\. Stopping\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Activated swap .*\.$
@@ -28,6 +28,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Found device .*\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(systemd-binfmt\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Inserted module '.+'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reexecuting\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reloading\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Set hostname to <[._[:alnum:]-]+>\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Set up .*\.$
@@ -37,6 +38,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: systemd [0-9]+ running in system mode\. \(.+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: systemd-tmpfiles-clean.timer: time change, recalculating next elapse.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: ((Starting|Stopping)|(Reached|Stopped) Target) (Paths|Timers|Sockets|Basic System|Default|Shutdown)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Created|Removed) slice .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Mounted|Unmounted) .+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Mounting|Unmounting) .+\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Starting|Started|Stopping|Stopped) .*$

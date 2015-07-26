@@ -1,4 +1,5 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* ((pci|scsi_host) )?(ADDING|UPDATING|IGNORING ADD|ADDED|CHANGING|CHANGED) /sys/devices/.+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \(udisks-daemon:[0-9]+\): udisks-daemon-WARNING \*\*: No /proc/mdstat file: No such file or directory$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* ((pci|scsi_host) )?(ADDING|UPDATING|IGNORING ADD|ADDED|CHANGING|CHANGED|UNMOUNTED) /sys/devices/.+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* (Refreshing ATA SMART data for|EMITTING CHANGED for)
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* /proc/self/mountinfo changed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: helper\(pid [0-9 ]+\): (launched job .*|completed with exit code 0)$

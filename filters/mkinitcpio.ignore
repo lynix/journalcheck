@@ -1,0 +1,3 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ mkinitcpio\[[0-9]+\]: -> Running build hook: \[sd-shutdown\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ mkinitcpio\[[0-9]+\]: ==> Build complete\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ mkinitcpio\[[0-9]+\]: ==> Starting build: none$
