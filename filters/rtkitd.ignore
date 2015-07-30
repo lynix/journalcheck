@@ -1,6 +1,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Canary thread running\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Demoted [0-9]+ threads\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Demoting known real-time threads\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Exiting (canary|watchdog) thread\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Exiting cleanly\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Running\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Successfully called chroot\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rtkit-daemon\[[0-9]+\]: Successfully demoted thread [0-9]+ of process [0-9]+ \(.+\)\.$
