@@ -14,7 +14,7 @@
 FILTER_GLOBAL=${FILTER_GLOBAL:-"/usr/lib/journalcheck"}
 FILTER_LOCAL=${FILTER_LOCAL:-"$HOME/.journalcheck.d"}
 MERGE_FILE=${MERGE_FILE:-"/tmp/merged.ignore"}
-STATE_FILE=${STATE_FILE:-"/var/tmp/journalcheck.state"}
+STATE_FILE=${STATE_FILE:-"${HOME}/.journalcheck.state"}
 
 
 cat "$FILTER_GLOBAL"/*.ignore > "$MERGE_FILE"
