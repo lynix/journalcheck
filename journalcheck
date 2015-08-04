@@ -5,10 +5,8 @@
 #                      2015 - Alexander Koch                          #
 #######################################################################
 
-#######################################################################
-#  This piece of software is released under MIT License, see LICENSE  #
-#  file.                                                              #
-#######################################################################
+#  This piece of software is released under MIT License, see LICENSE
+#  file.
 
 
 FILTER_GLOBAL=${FILTER_GLOBAL:-"/usr/lib/journalcheck"}
