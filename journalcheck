@@ -15,8 +15,10 @@ FILTER_GLOBAL=${FILTER_GLOBAL:-"/usr/lib/journalcheck"}
 FILTER_LOCAL=${FILTER_LOCAL:-"$HOME/.journalcheck.d"}
 MERGE_FILE=${MERGE_FILE:-"/tmp/merged.ignore"}
 STATE_FILE=${STATE_FILE:-"${HOME}/.journalcheck.state"}
+NCPU=${NCPU:-$(grep -c '^processor' "/proc/cpuinfo")}
 
 
+# merge filters to single file
 cat "$FILTER_GLOBAL"/*.ignore > "$MERGE_FILE"
 if [ -d "$FILTER_LOCAL" ]; then
 	for F in "$FILTER_LOCAL"/*.ignore; do
@@ -24,13 +26,32 @@ if [ -d "$FILTER_LOCAL" ]; then
 	done
 fi
 
+# fetch journal entries since last run (or beginning of journal)
+LOGF="$(mktemp)"
 if [ -r "$STATE_FILE" ]; then
-	journalctl --no-pager -a --since="$(cat "$STATE_FILE")" | egrep -vf "$MERGE_FILE"
+	journalctl --no-pager -a --since="$(cat "$STATE_FILE")" > "$LOGF"
 else
-	journalctl --no-pager -a | egrep -vf "$MERGE_FILE"
+	journalctl --no-pager -a > "$LOGF"
 fi
-
 date +'%F %T' > "$STATE_FILE"
-rm -f "$MERGE_FILE"
+
+# split journal into NCPU parts, spawn worker for each part
+split -a 3 -n l/$NCPU -d "$LOGF" "${LOGF}_"
+for I in $(seq 0 $(($NCPU - 1))); do
+	IN="${LOGF}_$(printf "%03d" "$I")"
+	OUT="${LOGF}_${I}_filtered"
+	{ egrep -vf "$MERGE_FILE" "$IN" > "$OUT"; rm "$IN"; } &
+done
+
+# wait for all worker threads to finish
+wait
+
+# re-assemble filtered output to stdout, remove parts
+for I in $(seq 0 $(($NCPU - 1))); do
+	cat "${LOGF}_${I}_filtered"
+	rm "${LOGF}_${I}_filtered"
+done
+
+rm -f "$MERGE_FILE" "$LOGF"
 
 exit 0
