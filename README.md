@@ -30,6 +30,16 @@ With a local MTA/MDA set up correctly, you will receive all log entries not
 matching the white-list by mail. In addition to the ones shipped with
 journalcheck, it looks in _~/.journalcheck.d_ for user-defined filters.
 
+## Configuration
+Journalcheck is configurable through the following environment variables
+(default values in brackets):
+
+ * `FILTER_GLOBAL` (*/usr/lib/journalcheck*): System-wide filter directory
+ * `FILTER_LOCAL` (*$HOME/.journalcheck.d*): User filter directory
+ * `MERGE_FILE` (*/tmp/merged.ignore*): output file for merged filters
+ * `STATE_FILE` (*$HOME/.journalcheck.state*): Last run timestamp file
+ * `NCPU` (no. of CPUs/cores): Number of worker processes to spawn
+
 ## Help Wanted
 As I only have a limited set of machines and applications running
 to derive filters from, I rely heavily on contributions in order to provide a
