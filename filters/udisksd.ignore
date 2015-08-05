@@ -1,7 +1,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \(udisks-daemon:[0-9]+\): udisks-daemon-WARNING \*\*: No /proc/mdstat file: No such file or directory$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* ((pci|scsi_host) )?(ADDING|UPDATING|IGNORING ADD|ADDED|CHANGING|CHANGED|UNMOUNTED) /sys/devices/.+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* (Refreshing ATA SMART data for|EMITTING CHANGED for)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* ((pci|scsi_host) )?(ADDING|UPDATING|IGNORING (ADD|REMOVE)|ADDED|CHANGING|CHANGED|MOUNTED|UNMOUNTED|REMOVING) /sys/devices/.+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* /proc/self/mountinfo changed$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* EMITTING (ADDED|CHANGED|REMOVED) for .+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: \*\*\*\* Refreshing ATA SMART data for .+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisks-daemon\[[0-9]+\]: helper\(pid [0-9 ]+\): (launched job .*|completed with exit code 0)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Acquired the name org\.freedesktop\.UDisks2 on the system message bus$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ udisksd\[[0-9]+\]: Cleaning up mount point /run/media/.* \(device [0-9:]+ is not mounted\)$
