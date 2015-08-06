@@ -19,10 +19,10 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sysctl\[[0-9]+\]: Overwriting earlier assignment of kernel/sysrq in file '/usr/lib64/sysctl.d/60-gentoo.conf'.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[0-9]+\]: Synchronized to time server [0-9a-f:.]+:123 \([._[:alnum:]-]+\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[0-9]+\]: starting version [0-9]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: (Activated|Deactivated) swap .*\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: (Activating|Deactivating) swap .*\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: .+: Unit is bound to inactive unit .+\. Stopping, too\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: .+: Unit not needed anymore\. Stopping\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Activated swap .*\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Activating swap .*\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Detected architecture x86-64\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Expecting device .*\.device\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Found device .*\.$
