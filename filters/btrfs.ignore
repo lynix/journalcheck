@@ -1,0 +1,3 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ btrfs\[[0-9]+\]: scrub done for [0-9a-f-]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ btrfs\[[0-9]+\]: scrub started at .+ and finished after [0-9:]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ btrfs\[[0-9]+\]: total bytes scrubbed: [0-9.]+(G|M|T)iB with 0 errors$
