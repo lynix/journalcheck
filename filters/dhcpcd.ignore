@@ -1,5 +1,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: DUID [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: (adding|deleting) (route to|address|default route via) [0-9a-f.:]+(/[0-9]+)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: DHCP lease expired$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: IAID [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: Router Advertisement from [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: acknowledged [0-9.]+ from [0-9.]+$
