@@ -15,7 +15,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: New session c?[0-9]+ of user [._[:alnum:]-]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Operation finished\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Removed session c?[0-9]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: System is powering down\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: System is (powering down|rebooting)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-modules-load\[[0-9]+\]: (Inserted module '[._[:alnum:]-]+'|Module '[._[:alnum:]-]+' is (already loaded|builtin))$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-shutdown\[1\]: Sending SIGTERM to remaining processes\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sleep\[[0-9]+\]: Suspending system\.\.\.$
@@ -31,9 +31,11 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Expecting device .*\.device\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Found device .*\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(systemd-binfmt\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Hardware watchdog '.+', version [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Inserted module '.+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reexecuting\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reloading\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Set hardware watchdog to [0-9]+min\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Set hostname to <[._[:alnum:]-]+>\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Set up .*\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Shutting down\.$
