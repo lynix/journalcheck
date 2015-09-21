@@ -1,2 +1,3 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ lvm\[[0-9]+\]: (No longer m|M)onitoring snapshot [._[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ lvm\[[0-9]+\]: /dev/.+: open failed: No medium found$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ lvm\[[0-9]+\]: [0-9]+ logical volume\(s\) in volume group ".+" now active$
