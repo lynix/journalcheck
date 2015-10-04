@@ -29,7 +29,7 @@ LOGF="$(mktemp)"
 if [ -r "$STATE_FILE" ]; then
 	journalctl --no-pager -a --since="$(cat "$STATE_FILE")" > "$LOGF"
 else
-	journalctl --no-pager -a > "$LOGF"
+	journalctl --no-pager -a -b > "$LOGF"
 fi
 date +'%F %T' > "$STATE_FILE"
 
