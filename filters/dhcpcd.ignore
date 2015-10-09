@@ -11,6 +11,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: leased [0-9.]+ for ([0-9]+ seconds|infinity)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: no IPv6 Routers available$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: offered [0-9.]+ from [0-9.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: probing static address [0-9a-f.:/]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: rebinding lease of [0-9.]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: removing interface$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dhcpcd\[[0-9]+\]: [._[:alnum:]-]+: sending IPv6 Router Solicitation$
