@@ -1,0 +1,3 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ pacman\[[0-9]+\]: :: Synchronizing package databases\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ pacman\[[0-9]+\]: [._[:alnum:]-]+ is up to date$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ pacman\[[0-9]+\]: downloading [._[:alnum:]-]+\.\.\.$
