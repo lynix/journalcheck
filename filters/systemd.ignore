@@ -1,4 +1,4 @@
- *Enforced usage limit is thus [0-9.]+(M|G)\.$
+ *Enforced usage limit is thus [0-9.]+(M|G), of which [0-9.]+(M|G) are still available\.$
  *Leaving at least [0-9.]+(M|G) free \(of currently available [0-9.]+(G|M) of space\)\.$
  *Maximum allowed usage is set to [0-9.]+(M|G)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-cryptsetup\[[0-9]+\]: Set cipher aes, mode xts-plain(64)?, key size [0-9]+ bits for device [._[:alnum:]/-]+\.$
@@ -7,10 +7,11 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: (Runtime|Permanent) journal is using [0-9.]+M \(max allowed [0-9.]+(M|G), trying to leave [0-9.]+(M|G) free of [0-9.]+G available → current limit [0-9.]+(M|G)\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Journal (started|stopped)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Missed [0-9]+ kernel messages$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Permanent journal \(/var/log/journal/\) is currently using [0-9.]M\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Runtime journal \(/run/log/journal/\) is currently using [0-9.]+(M|G)\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Time spent on flushing to /var is [0-9.]+ms for [0-9]+ entries\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Permanent journal \(/var/log/journal/\) is currently using [0-9.]+M\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: (Runtime|System) journal \(/run/log/journal/\) is currently using [0-9.]+(M|G)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Journal (started|stopped)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Received SIGTERM from PID 1 \(systemd\).$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Time spent on flushing to /var is [0-9.]+ms for [0-9]+ entries\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: (New seat seat[0-9]+\.|Watching system buttons on /dev/input/event[0-9]+ \(Power Button\))$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Linked /tmp/\.X11-unix/X[0-9]+ to /run/user/[0-9]+/X11-display\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: New session c?[0-9]+ of user [._[:alnum:]-]+\.$
@@ -32,7 +33,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Detected architecture x86-64\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Expecting device .*\.device\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Found device .*\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(systemd-binfmt\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(.+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Hardware watchdog '.+', version [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Inserted module '.+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reexecuting\.$
@@ -43,6 +44,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Shutting down\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Smack is not enabled in the kernel, not loading access rules\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Switching root\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Unset automount .+\.automount\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: systemd [0-9]+ running in system mode\. \(.+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: systemd-tmpfiles-clean.timer: time change, recalculating next elapse.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: ((Starting|Stopping)|(Reached|Stopped) Target) (Paths|Timers|Sockets|Basic System|Default|Shutdown)\.$
