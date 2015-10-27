@@ -30,10 +30,10 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: (Activating|Deactivating) swap .*\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: .+: Unit is bound to inactive unit .+\. Stopping, too\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: .+: Unit not needed anymore\. Stopping\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: .+\.automount: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(.+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Detected architecture x86-64\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Expecting device .*\.device\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Found device .*\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Got automount request for [._[:alnum:]/-]+, triggered by [0-9]+ \(.+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Hardware watchdog '.+', version [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Inserted module '.+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: Reexecuting\.$
