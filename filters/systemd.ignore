@@ -8,7 +8,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Journal (started|stopped)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Missed [0-9]+ kernel messages$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journal\[[0-9]+\]: Permanent journal \(/var/log/journal/\) is currently using [0-9.]+M\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: (Runtime|System) journal \(/run/log/journal/\) is currently using [0-9.]+(M|G)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: (Runtime|System) journal \(/(run|var)/log/journal/\) is currently using [0-9.]+(M|G)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Journal (started|stopped)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Received SIGTERM from PID 1 \(systemd\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-journald\[[0-9]+\]: Time spent on flushing to /var is [0-9.]+ms for [0-9]+ entries\.$
@@ -20,10 +20,18 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: System is (powering down|rebooting)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: Watching system buttons on .+ \(.+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-modules-load\[[0-9]+\]: (Inserted module '[._[:alnum:]-]+'|Module '[._[:alnum:]-]+' is (already loaded|builtin))$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd-wait-online\[[0-9]+\]: ignoring: lo$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: Enumeration completed$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: Configured$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: DHCPv4 address [0-9.]+/[0-9]+ via [0-9.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: Gained carrier$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: Renamed to [._[:alnum:]-]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[0-9]+\]: Using system hostname '[._[:alnum:]-]+'\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-shutdown\[1\]: Sending SIGTERM to remaining processes\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sleep\[[0-9]+\]: Suspending system\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sleep\[[0-9]+\]: System resumed\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sysctl\[[0-9]+\]: Overwriting earlier assignment of kernel/sysrq in file '/usr/lib64/sysctl.d/60-gentoo.conf'.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[0-9]+\]: Network configuration changed, trying to establish connection\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[0-9]+\]: Synchronized to time server [0-9a-f:.]+:123 \([._[:alnum:]-]+\).$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[0-9]+\]: starting version [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[1\]: (Activated|Deactivated) swap .*\.$
