@@ -1,4 +1,4 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCP(REQUEST|OFFER|RELEASE)\(eth[0-9]\) [0-9.]+ [0-9a-f:]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCP(REQUEST|OFFER|RELEASE|INFORM)\(eth[0-9]\) [0-9.]+ [0-9a-f:]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCP, IP range [0-9.]+ -- [0-9.]+, lease time [0-9]+(d|h)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCPACK\(eth[0-9]\) [0-9.]+ [0-9a-f:]+( [._[:alnum:]-]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsmasq-dhcp\[[0-9]+\]: DHCPDISCOVER\(eth[0-9]\)( [0-9.]+)? [0-9a-f:]+$
