@@ -24,8 +24,9 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: Enumeration completed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: Configured$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: DHCPv4 address [0-9.]+/[0-9]+ via [0-9.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: Gained carrier$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: Gained (carrier|IPv6LL)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-networkd\[[0-9]+\]: [._[:alnum:]-]+: Renamed to [._[:alnum:]-]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[0-9]+\]: Switching to system DNS server [0-9a-f:.]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[0-9]+\]: Using system hostname '[._[:alnum:]-]+'\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-shutdown\[1\]: Sending SIGTERM to remaining processes\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-sleep\[[0-9]+\]: Suspending system\.\.\.$
