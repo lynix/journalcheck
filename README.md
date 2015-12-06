@@ -39,6 +39,7 @@ Journalcheck is configurable through the following environment variables
  * `MERGE_FILE` (*/tmp/merged.ignore*): output file for merged filters
  * `STATE_FILE` (*$HOME/.journalcheck.state*): Last run timestamp file
  * `NCPU` (no. of CPUs/cores): Number of worker processes to spawn
+ * `LOGLVL` (0..5): Priority (loglevel) filter
 
 ## Help Wanted
 As I only have a limited set of machines and applications running
