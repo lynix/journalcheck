@@ -1,12 +1,8 @@
-
+DESTDIR ?= 
 PREFIX ?= /usr
 
 install:
-	install -d $(PREFIX)/bin
-	install -m 755 journalcheck.sh $(PREFIX)/bin/journalcheck
-	install -d $(PREFIX)/lib/journalcheck
-	install -m 644 filters/*.ignore $(PREFIX)/lib/journalcheck/
-
+	install -D -m 755 journalcheck.sh $(DESTDIR)$(PREFIX)/bin/journalcheck
+	install -D -m 644 -t $(DESTDIR)$(PREFIX)/lib/journalcheck filters/*.ignore
 
 .PHONY: install
-
