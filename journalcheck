@@ -8,17 +8,17 @@
 
 FILTER_GLOBAL=${FILTER_GLOBAL:-"/usr/lib/journalcheck"}
 FILTER_LOCAL=${FILTER_LOCAL:-~/".journalcheck.d"}
-MERGE_FILE=${MERGE_FILE:-"/tmp/merged.ignore"}
 STATE_FILE=${STATE_FILE:-~/".journalcheck.state"}
 NCPU=${NCPU:-$(grep -c '^processor' "/proc/cpuinfo")}
 LOGLVL=${LOGLVL:-"0..5"}
 
 
 # merge filters to single file
-cat "$FILTER_GLOBAL"/*.ignore > "$MERGE_FILE"
+FILTER_FILE="$(mktemp)"
+cat "$FILTER_GLOBAL"/*.ignore > "$FILTER_FILE"
 if [ -d "$FILTER_LOCAL" ]; then
 	for F in "$FILTER_LOCAL"/*.ignore; do
-		cat "$F" >> "$MERGE_FILE"
+		cat "$F" >> "$FILTER_FILE"
 	done
 fi
 
@@ -36,7 +36,7 @@ split -a 3 -n l/$NCPU -d "$LOGF" "${LOGF}_"
 for I in $(seq 0 $(($NCPU - 1))); do
 	IN="${LOGF}_$(printf "%03d" "$I")"
 	OUT="${LOGF}_${I}_filtered"
-	{ egrep -vf "$MERGE_FILE" "$IN" > "$OUT"; rm "$IN"; } &
+	{ egrep -vf "$FILTER_FILE" "$IN" > "$OUT"; rm "$IN"; } &
 done
 
 # wait for all worker threads to finish
@@ -48,6 +48,6 @@ for I in $(seq 0 $(($NCPU - 1))); do
 	rm "${LOGF}_${I}_filtered"
 done
 
-rm -f "$MERGE_FILE" "$LOGF"
+rm -f "$FILTER_FILE" "$LOGF"
 
 exit 0
