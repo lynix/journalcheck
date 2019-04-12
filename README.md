@@ -18,8 +18,8 @@ volatile system logs as well.
  * grep (`egrep`)
 
 ## Usage
-Journalcheck is best run as regular user (no need for root privileges!)
-via cron:
+Journalcheck is best run as regular user (no need for root privileges!) via
+cron:
 ```
 MAILTO=user@localhost
 
@@ -42,10 +42,9 @@ Journalcheck is configurable through the following environment variables
  * `JC_LOGLEVEL` (0..5): Priority (loglevel) filter
 
 ## Help Wanted
-As I only have a limited set of machines and applications running
-to derive filters from, I rely heavily on contributions in order to provide a
-universal filter set. Pull requests are welcome!
+As I only have a limited set of machines and applications running to derive
+filters from, I rely heavily on contributions in order to provide a universal
+filter set. Pull requests are welcome!
 
 ## License
-Journalcheck is released under the terms of the MIT License, see
-LICENSE file.
+Journalcheck is released under the terms of the MIT License, see LICENSE file.
