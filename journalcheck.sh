@@ -18,7 +18,7 @@ FILTER_FILE="$(mktemp)"
 cat "$FILTERS_GLOBAL"/*.ignore > "$FILTER_FILE"
 if [ -d "$FILTERS_LOCAL" ]; then
 	for F in "$FILTERS_LOCAL"/*.ignore; do
-		cat "$F" >> "$FILTER_FILE"
+		[ -r "$F" ] && cat "$F" >> "$FILTER_FILE"
 	done
 fi
 
