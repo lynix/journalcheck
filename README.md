@@ -13,8 +13,9 @@ passes the remaining messages to stdout. Journalcheck therefore works with
 volatile system logs as well.
 
 ## Dependencies
- * journald (`journalctl`)
- * `egrep`
+ * systemd (`journalctl`)
+ * coreutils (`split`)
+ * grep (`egrep`)
 
 ## Usage
 Journalcheck is best run as regular user (no need for root privileges!)
