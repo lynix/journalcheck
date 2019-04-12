@@ -41,7 +41,7 @@ Journalcheck is configurable through the following environment variables
 
  * `JC_FILTERS_GLOBAL` (*/usr/lib/journalcheck*): Directory for system-wide filters
  * `JC_FILTERS_USER` (*~/.journalcheck.d*): Directory for user-defined filters
- * `JC_STATE_FILE` (*~/.journalcheck.state*): Last run timestamp file
+ * `JC_CURSOR_FILE` (*~/.journalcheck.cursor*): Last run timestamp file
  * `JC_NUM_THREADS` (no. of logical CPUs): Number of worker threads to spawn
  * `JC_LOGLEVEL` (0..5): Priority (loglevel) filter
 

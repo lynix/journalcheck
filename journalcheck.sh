@@ -8,7 +8,7 @@
 
 FILTERS_GLOBAL=${JC_FILTERS_GLOBAL:-"/usr/lib/journalcheck"}
 FILTERS_LOCAL=${JC_FILTERS_USER:-~/".journalcheck.d"}
-STATE_FILE=${JC_STATE_FILE:-~/".journalcheck.state"}
+CURSOR_FILE=${JC_CURSOR_FILE:-~/".journalcheck.cursor"}
 NUM_THREADS=${JC_NUM_THREADS:-$(grep -c '^processor' "/proc/cpuinfo")}
 LOGLEVEL=${JC_LOGLEVEL:-"0..5"}
 
@@ -24,12 +24,25 @@ fi
 
 # fetch journal entries since last run (or beginning of journal)
 LOG="$(mktemp)"
-if [ -r "$STATE_FILE" ]; then
-	journalctl --no-pager -l -p "$LOGLEVEL" --since="$(cat "$STATE_FILE")" > "$LOG"
+ARGS="--no-pager --show-cursor -l -p $LOGLEVEL"
+if [ -r "$CURSOR_FILE" ]; then
+	ARGS+=" --after-cursor=$(cat "$CURSOR_FILE")"
 else
-	journalctl --no-pager -l -p "$LOGLEVEL" -b > "$LOG"
+	ARGS+=" -b"
 fi
-date +'%F %T' > "$STATE_FILE"
+journalctl $ARGS > "$LOG"
+if [ $? -ne 0 ]; then
+	echo "Error: failed to dump system journal" >&2
+	exit 1
+fi
+
+# save cursor for next iteration
+CURSOR="$(tail -n 1 "$LOG")"
+if [[ $CURSOR =~ ^--\ cursor:\  ]]; then
+	echo "${CURSOR:11}" > "$CURSOR_FILE"
+else
+	echo "Error: unable to save journal cursor" >&2
+fi
 
 # split journal into NUM_THREADS parts, spawn worker for each part
 split -a 3 -n l/$NUM_THREADS -d "$LOG" "${LOG}_"
