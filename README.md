@@ -34,11 +34,11 @@ journalcheck, it looks in _~/.journalcheck.d_ for user-defined filters.
 Journalcheck is configurable through the following environment variables
 (default values in brackets):
 
- * `FILTER_GLOBAL` (*/usr/lib/journalcheck*): System-wide filter directory
- * `FILTER_LOCAL` (*~/.journalcheck.d*): User filter directory
- * `STATE_FILE` (*~/.journalcheck.state*): Last run timestamp file
- * `NCPU` (no. of CPUs/cores): Number of worker processes to spawn
- * `LOGLVL` (0..5): Priority (loglevel) filter
+ * `JC_FILTERS_GLOBAL` (*/usr/lib/journalcheck*): Directory for system-wide filters
+ * `JC_FILTERS_USER` (*~/.journalcheck.d*): Directory for user-defined filters
+ * `JC_STATE_FILE` (*~/.journalcheck.state*): Last run timestamp file
+ * `JC_NUM_THREADS` (no. of logical CPUs): Number of worker threads to spawn
+ * `JC_LOGLEVEL` (0..5): Priority (loglevel) filter
 
 ## Help Wanted
 As I only have a limited set of machines and applications running
