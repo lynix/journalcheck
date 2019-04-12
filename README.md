@@ -35,9 +35,9 @@ Journalcheck is configurable through the following environment variables
 (default values in brackets):
 
  * `FILTER_GLOBAL` (*/usr/lib/journalcheck*): System-wide filter directory
- * `FILTER_LOCAL` (*$HOME/.journalcheck.d*): User filter directory
+ * `FILTER_LOCAL` (*~/.journalcheck.d*): User filter directory
  * `MERGE_FILE` (*/tmp/merged.ignore*): output file for merged filters
- * `STATE_FILE` (*$HOME/.journalcheck.state*): Last run timestamp file
+ * `STATE_FILE` (*~/.journalcheck.state*): Last run timestamp file
  * `NCPU` (no. of CPUs/cores): Number of worker processes to spawn
  * `LOGLVL` (0..5): Priority (loglevel) filter
 
