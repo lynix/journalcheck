@@ -25,9 +25,9 @@ fi
 # fetch journal entries since last run (or beginning of journal)
 LOG="$(mktemp)"
 if [ -r "$STATE_FILE" ]; then
-	journalctl --no-pager -a -p "$LOGLEVEL" --since="$(cat "$STATE_FILE")" > "$LOG"
+	journalctl --no-pager -l -p "$LOGLEVEL" --since="$(cat "$STATE_FILE")" > "$LOG"
 else
-	journalctl --no-pager -a -p "$LOGLEVEL" -b > "$LOG"
+	journalctl --no-pager -l -p "$LOGLEVEL" -b > "$LOG"
 fi
 date +'%F %T' > "$STATE_FILE"
 
