@@ -1,0 +1,8 @@
+[Unit]
+Description=journalcheck
+
+[Service]
+Type=oneshot
+User=lynix
+Environment=JC_LOGLEVEL=0..4
+ExecStart=/usr/bin/checkrun journalcheck

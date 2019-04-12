@@ -31,6 +31,10 @@ With a local MTA/MDA set up correctly, you will receive all log entries not
 matching the white-list by mail. In addition to the ones shipped with
 journalcheck, it looks in _~/.journalcheck.d_ for user-defined filters.
 
+For cron-less systems making use of systemd .timer units instead, there are
+example units in _example_. They rely on
+[checkrun.sh](https://github.com/lynix/checkrun.sh) for mail functionality.
+
 ## Configuration
 Journalcheck is configurable through the following environment variables
 (default values in brackets):
