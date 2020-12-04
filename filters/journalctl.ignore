@@ -1,4 +1,5 @@
 ^-- Logs begin at \w{3} [0-9-]{10} [0-9:]{8} [A-Z]+, end at \w{3} [0-9-]{10} [0-9:]{8} [A-Z]+\. --$
+^-- Journal begins at \w{3} [0-9-]{10} [0-9:]{8} [A-Z]+, ends at \w{3} [0-9-]{10} [0-9:]{8} [A-Z]+\. --$
 ^-- No entries --$
 ^-- Reboot --$
 ^-- cursor: [^ ]+$
