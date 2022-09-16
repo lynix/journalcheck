@@ -49,7 +49,7 @@ split -a 3 -n l/$NUM_THREADS -d "$LOG" "${LOG}_"
 for I in $(seq 0 $(($NUM_THREADS - 1))); do
 	IN="${LOG}_$(printf "%03d" "$I")"
 	OUT="${LOG}_${I}_filtered"
-	{ egrep -vf "$FILTER_FILE" "$IN" > "$OUT"; rm "$IN"; } &
+	{ grep -Evf "$FILTER_FILE" "$IN" > "$OUT"; rm "$IN"; } &
 done
 
 # wait for all worker threads to finish
