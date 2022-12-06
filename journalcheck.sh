@@ -22,7 +22,7 @@ if [ -d "$FILTERS_LOCAL" ]; then
 	done
 fi
 
-# fetch journal entries since last run (or beginning of journal)
+# fetch journal entries since last run (or system bootup)
 LOG="$(mktemp)"
 ARGS="--no-pager --show-cursor -l -p $LOGLEVEL"
 if [ -r "$CURSOR_FILE" ]; then
