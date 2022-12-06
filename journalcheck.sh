@@ -17,9 +17,7 @@ LOGLEVEL=${JC_LOGLEVEL:-"0..5"}
 FILTER_FILE="$(mktemp)"
 cat "$FILTERS_GLOBAL"/*.ignore > "$FILTER_FILE"
 if [ -d "$FILTERS_LOCAL" ]; then
-	for F in "$FILTERS_LOCAL"/*.ignore; do
-		[ -r "$F" ] && cat "$F" >> "$FILTER_FILE"
-	done
+	cat "$FILTERS_LOCAL"/*.ignore >> "$FILTER_FILE" 2>/dev/null
 fi
 
 # fetch journal entries since last run (or system bootup)
@@ -46,21 +44,20 @@ fi
 
 # split journal into NUM_THREADS parts, spawn worker for each part
 split -a 3 -n l/$NUM_THREADS -d "$LOG" "${LOG}_"
+rm "$LOG"
 for I in $(seq 0 $(($NUM_THREADS - 1))); do
-	IN="${LOG}_$(printf "%03d" "$I")"
-	OUT="${LOG}_${I}_filtered"
-	{ grep -Evf "$FILTER_FILE" "$IN" > "$OUT"; rm "$IN"; } &
+	F="${LOG}_$(printf "%03d" "$I")"
+	{ grep -Evf "$FILTER_FILE" "$F" > "${F}_"; mv "${F}_" "$F"; } &
 done
 
 # wait for all worker threads to finish
 wait
+rm "$FILTER_FILE"
 
 # re-assemble filtered output to stdout, remove parts
 for I in $(seq 0 $(($NUM_THREADS - 1))); do
-	cat "${LOG}_${I}_filtered"
-	rm "${LOG}_${I}_filtered"
+	cat "${LOG}_$(printf "%03d" "$I")"
+	rm "$_"
 done
-
-rm -f "$FILTER_FILE" "$LOG"
 
 exit 0
