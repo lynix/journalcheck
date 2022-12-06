@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #  journalcheck - Simple 'logcheck' replacement for journald
-#  (C) 2015-2019 Alexander Koch
+#  (C) Alexander Koch
 
 #  This software is released under the terms of the MIT License, see LICENSE.
 

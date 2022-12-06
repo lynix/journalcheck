@@ -1,7 +1,7 @@
 journalcheck
 ============
 
-2015-2019 - Alexander Koch
+(C) Alexander Koch
 
 ### A simple replacement for logcheck for usage with journald
 
