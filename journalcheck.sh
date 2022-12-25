@@ -5,6 +5,8 @@
 
 #  This software is released under the terms of the MIT License, see LICENSE.
 
+# to have filters work in foreign languages (french)
+export LANG=POSIX
 
 FILTERS_GLOBAL=${JC_FILTERS_GLOBAL:-"/usr/lib/journalcheck"}
 FILTERS_LOCAL=${JC_FILTERS_USER:-~/".journalcheck.d"}
