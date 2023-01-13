@@ -5,7 +5,7 @@
 
 #  This software is released under the terms of the MIT License, see LICENSE.
 
-# to have filters work in foreign languages (french)
+# to have filters work in foreign languages (French)
 export LANG=POSIX
 
 FILTERS_GLOBAL=${JC_FILTERS_GLOBAL:-"/usr/lib/journalcheck"}
@@ -30,8 +30,7 @@ if [ -r "$CURSOR_FILE" ]; then
 else
 	ARGS+=" -b"
 fi
-journalctl $ARGS &> "$LOG"
-if [ $? -ne 0 ]; then
+if journalctl "$ARGS" &> "$LOG"; then
 	echo "Error: failed to dump system journal" >&2
 	exit 1
 fi
@@ -45,9 +44,9 @@ else
 fi
 
 # split journal into NUM_THREADS parts, spawn worker for each part
-split -a 3 -n l/$NUM_THREADS -d "$LOG" "${LOG}_"
+split -a 3 -n l/"$NUM_THREADS" -d "$LOG" "${LOG}_"
 rm "$LOG"
-for I in $(seq 0 $(($NUM_THREADS - 1))); do
+for I in $(seq 0 $((NUM_THREADS - 1))); do
 	F="${LOG}_$(printf "%03d" "$I")"
 	{ grep -Evf "$FILTER_FILE" "$F" > "${F}_"; mv "${F}_" "$F"; } &
 done
@@ -57,7 +56,7 @@ wait
 rm "$FILTER_FILE"
 
 # re-assemble filtered output to stdout, remove parts
-for I in $(seq 0 $(($NUM_THREADS - 1))); do
+for I in $(seq 0 $((NUM_THREADS - 1))); do
 	cat "${LOG}_$(printf "%03d" "$I")"
 	rm "$_"
 done
