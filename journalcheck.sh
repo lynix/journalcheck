@@ -30,7 +30,8 @@ if [ -r "$CURSOR_FILE" ]; then
 else
 	ARGS+=" -b"
 fi
-if journalctl "$ARGS" &> "$LOG"; then
+journalctl $ARGS &> "$LOG"
+if [[ $? != 0 ]]; then
 	echo "Error: failed to dump system journal" >&2
 	exit 1
 fi
