@@ -17,18 +17,26 @@ volatile system logs as well.
  * coreutils (`split`)
  * grep (`egrep`)
 
-## Usage
-Journalcheck is best run as regular user (no need for root privileges!) via
-cron:
+## Installation
+Journalcheck is best run as regular user account (no need for root privileges!).
+
+As root: add the user account to the group 'systemd-journal', in order to authorize it to read all logs:
 ```
-MAILTO=user@localhost
+usermod -a -G systemd-journal UserAccountName
+```
+
+Then add to your crontab a line invoking journalcheck:
+```
+MAILTO=UserAccountName@localhost
 
 # m  h  dom mon dow   command
 */30 *  *   *   *     journalcheck
 ```
 
-With a local MTA/MDA set up correctly, you will receive all log entries not
-matching the white-list by mail. In addition to the ones shipped with
+## Usage
+
+With a local MTA/MDA set up correctly, you will then receive by mail all log entries not
+matching the white-list. In addition to the ones shipped with
 journalcheck, it looks in _~/.journalcheck.d_ for user-defined filters.
 
 For cron-less systems making use of systemd .timer units instead, there are

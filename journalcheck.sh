@@ -5,7 +5,7 @@
 
 #  This software is released under the terms of the MIT License, see LICENSE.
 
-# to have filters work in foreign languages (french)
+# to have filters work in foreign languages (French)
 export LANG=POSIX
 
 FILTERS_GLOBAL=${JC_FILTERS_GLOBAL:-"/usr/lib/journalcheck"}
@@ -16,14 +16,20 @@ LOGLEVEL=${JC_LOGLEVEL:-"0..5"}
 
 
 # merge filters to single file
-FILTER_FILE="$(mktemp)"
-cat "$FILTERS_GLOBAL"/*.ignore > "$FILTER_FILE"
+FILTER_FILE="$(mktemp --tmpdir journalcheck_"$$"_filter.XXXXXXXXXXXXXX.tmp)"
+[ -d "$FILTERS_GLOBAL" ] && cat "$FILTERS_GLOBAL"/*.ignore > "$FILTER_FILE"
 if [ -d "$FILTERS_LOCAL" ]; then
 	cat "$FILTERS_LOCAL"/*.ignore >> "$FILTER_FILE" 2>/dev/null
 fi
 
+if [[ ! -s "$FILTER_FILE" ]]; then
+	echo "Error: no filters declared" >&2
+	rm "$FILTER_FILE"
+	exit 1
+fi
+
 # fetch journal entries since last run (or system bootup)
-LOG="$(mktemp)"
+LOG="$(mktemp --tmpdir journalcheck_"$$"_log.XXXXXXXXXXXXXX.tmp)"
 ARGS="--no-pager --show-cursor -l -p $LOGLEVEL"
 if [ -r "$CURSOR_FILE" ]; then
 	ARGS+=" --after-cursor=$(cat "$CURSOR_FILE")"
@@ -31,33 +37,33 @@ else
 	ARGS+=" -b"
 fi
 journalctl $ARGS &> "$LOG"
-if [ $? -ne 0 ]; then
+if [[ $? != 0 ]]; then
 	echo "Error: failed to dump system journal" >&2
 	exit 1
 fi
 
+# split journal into NUM_THREADS parts, spawn worker for each part
+split -a 3 -n l/"$NUM_THREADS" -d "$LOG" "${LOG}_"
+for I in $(seq 0 $((NUM_THREADS - 1))); do
+	F="${LOG}_$(printf "%03d" "$I")"
+	{ grep -Evf "$FILTER_FILE" "$F" > "${F}_"; mv "${F}_" "$F"; } &
+done
+
 # save cursor for next iteration
 CURSOR="$(tail -n 1 "$LOG")"
+rm "$LOG"
 if [[ $CURSOR =~ ^--\ cursor:\  ]]; then
 	echo "${CURSOR:11}" > "$CURSOR_FILE"
 else
 	echo "Error: unable to save journal cursor" >&2
 fi
 
-# split journal into NUM_THREADS parts, spawn worker for each part
-split -a 3 -n l/$NUM_THREADS -d "$LOG" "${LOG}_"
-rm "$LOG"
-for I in $(seq 0 $(($NUM_THREADS - 1))); do
-	F="${LOG}_$(printf "%03d" "$I")"
-	{ grep -Evf "$FILTER_FILE" "$F" > "${F}_"; mv "${F}_" "$F"; } &
-done
-
 # wait for all worker threads to finish
 wait
 rm "$FILTER_FILE"
 
 # re-assemble filtered output to stdout, remove parts
-for I in $(seq 0 $(($NUM_THREADS - 1))); do
+for I in $(seq 0 $((NUM_THREADS - 1))); do
 	cat "${LOG}_$(printf "%03d" "$I")"
 	rm "$_"
 done
