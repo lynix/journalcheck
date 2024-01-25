@@ -46,6 +46,8 @@ fi
 CURSOR="$(tail -n 1 "$LOG")"
 if [[ $CURSOR =~ ^--\ cursor:\  ]]; then
 	echo "${CURSOR:11}" > "$CURSOR_FILE"
+elif [[ $CURSOR =~ ^--\ No\ entries\ --$ ]]; then
+	exit 0
 else
 	echo "Error: unable to save journal cursor" >&2
 fi
