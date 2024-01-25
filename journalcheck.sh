@@ -14,16 +14,22 @@ CURSOR_FILE=${JC_CURSOR_FILE:-~/".journalcheck.cursor"}
 NUM_THREADS=${JC_NUM_THREADS:-$(grep -c '^processor' "/proc/cpuinfo")}
 LOGLEVEL=${JC_LOGLEVEL:-"0..5"}
 
+FILTER_FILE="$(mktemp)"
+LOG="$(mktemp)"
+
+
+function cleanup() {
+	rm -f "$FILTER_FILE" "$LOG" "${LOG}_???"
+}
+trap cleanup EXIT
 
 # merge filters to single file
-FILTER_FILE="$(mktemp)"
 cat "$FILTERS_GLOBAL"/*.ignore > "$FILTER_FILE"
 if [ -d "$FILTERS_LOCAL" ]; then
 	cat "$FILTERS_LOCAL"/*.ignore >> "$FILTER_FILE" 2>/dev/null
 fi
 
 # fetch journal entries since last run (or system bootup)
-LOG="$(mktemp)"
 ARGS="--no-pager --show-cursor -l -p $LOGLEVEL"
 if [ -r "$CURSOR_FILE" ]; then
 	ARGS+=" --after-cursor=$(cat "$CURSOR_FILE")"
@@ -46,7 +52,6 @@ fi
 
 # split journal into NUM_THREADS parts, spawn worker for each part
 split -a 3 -n l/$NUM_THREADS -d "$LOG" "${LOG}_"
-rm "$LOG"
 for I in $(seq 0 $(($NUM_THREADS - 1))); do
 	F="${LOG}_$(printf "%03d" "$I")"
 	{ grep -Evf "$FILTER_FILE" "$F" > "${F}_"; mv "${F}_" "$F"; } &
@@ -54,12 +59,10 @@ done
 
 # wait for all worker threads to finish
 wait
-rm "$FILTER_FILE"
 
 # re-assemble filtered output to stdout, remove parts
 for I in $(seq 0 $(($NUM_THREADS - 1))); do
 	cat "${LOG}_$(printf "%03d" "$I")"
-	rm "$_"
 done
 
 exit 0
